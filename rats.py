@@ -97,18 +97,6 @@ def trans():
             translations = translator.translate(txt, dest='hi')            
         elif 'Urdu' == lang or 'urdu'== lang:
             translations = translator.translate(txt, dest='ur')
-        elif 'Hebrew' == lang or 'hebrew' == lang:
-            translations = translator.translate(txt, dest='he')
-        elif 'Filipino' == lang or 'filipino' == lang:
-            translations = translator.translate(txt, dest='fil')
-        elif 'Zulu' == lang or 'zulu' == lang:
-            translations = translator.translate(txt, dest='zu')
-        elif 'Yiddish' == lang or 'yiddish' == lang:
-            translations = translator.translate(txt, dest='yi')
-        elif 'Ukrainian' == lang or 'ukrainian' == lang:
-            translations = translator.translate(txt, dest='uk')
-        elif 'Telugu' == lang or 'telugu' == lang:
-            translations = translator.translate(txt, dest='te')
         elif 'Tamil' == lang or 'tamil' == lang:
             translations = translator.translate(txt, dest='ta')
         elif 'Thai' == lang or 'thai' == lang:
@@ -133,22 +121,6 @@ def trans():
             translations = translator.translate(txt, dest='ro')
         elif 'Portuguese' == lang or 'portuguese' == lang:
             translations = translator.translate(txt, dest='pt')
-        elif 'Polish' == lang or 'polish' == lang:
-            translations = translator.translate(txt, dest='pl')
-        elif 'Persian' == lang or 'persian' == lang:
-            translations = translator.translate(txt, dest='fa')
-        elif 'Nepali' == lang or 'nepali' == lang:
-            translations = translator.translate(txt, dest='ne')
-        elif 'Arabic' == lang or 'arabic' == lang:
-            translations = translator.translate(txt, dest='ar')
-        elif 'Albanian' == lang or 'albanian' == lang:
-            translations = translator.translate(txt, dest='sq')
-        elif 'Armenian' == lang or 'armenian' == lang:
-            translations = translator.translate(txt, dest='hy')
-        elif 'Belarusian' == lang or 'belarusian' == lang:
-            translations = translator.translate(txt, dest='be')
-        elif 'Bengali' == lang or 'bengali' == lang:
-            translations = translator.translate(txt, dest='bn')
         elif 'Bulgarian' == lang or 'bulgarian' == lang:
             translations = translator.translate(txt, dest='bg')
         elif 'Chinese' == lang or 'chinese' == lang:
@@ -175,39 +147,7 @@ def trans():
             translations = translator.translate(txt, dest='de')
         elif 'Greek' == lang or 'greek' == lang:
             translations = translator.translate(txt, dest='el')
-        elif 'Gujarati' == lang or 'gujarati' == lang:
-            translations = translator.translate(txt, dest='gu')
-        elif 'Hungarian' == lang or 'hungarian' == lang:
-            translations = translator.translate(txt, dest='hu')
-        elif 'Indonesian' == lang or 'indonesian' == lang:
-            translations = translator.translate(txt, dest='id')
-        elif 'Irish' == lang or 'irish' == lang:
-            translations = translator.translate(txt, dest='ga')
-        elif 'Italian' == lang or 'italian' == lang:
-            translations = translator.translate(txt, dest='it')
-        elif 'Japanese' == lang or 'japanese' == lang:
-            translations = translator.translate(txt, dest='ja')
-        elif 'Kannada' == lang or 'kannada' == lang:
-            translations = translator.translate(txt, dest='kn')
-        elif 'Korean' == lang or 'korean' == lang:
-            translations = translator.translate(txt, dest='ko')
-        elif 'Kurdish' == lang or 'kurdish' == lang:
-            translations = translator.translate(txt, dest='ku')
-        elif 'Latin' == lang or 'latin' == lang:
-            translations = translator.translate(txt, dest='la')
-        elif 'Latvian' == lang or 'latvian' == lang:
-            translations = translator.translate(txt, dest='lv')
-        elif 'Lithuanian' == lang or 'lithuanian' == lang:
-            translations = translator.translate(txt, dest='lt')
-        elif 'Malayalam' == lang or 'malayalam' == lang:
-            translations = translator.translate(txt, dest='ml')
-        elif 'Marathi' == lang or 'marathi' == lang:
-            translations = translator.translate(txt, dest='mr')
-        elif 'Mongolian' == lang or 'mongolian' == lang:
-            translations = translator.translate(txt, dest='mn')
-        elif 'Norwegian' == lang or 'norwegian' == lang:
-            translations = translator.translate(txt, dest='no')
-
+   
         else:
             speak("Try Again! either it is not available or there was some recognition issue ")
             
@@ -239,8 +179,8 @@ if __name__ == "__main__":
             speak(results)
 
         elif 'which language you can translate' in query:
-            speak("I can translate in hindi,spanish,urdu,punjabi,italian,kannad,french,german,chinese,korean,marathi,tamil,bengali,malayalam,japanese,latin,russian,arabic,persian"
-                  "greek,turkish,romanian and many more")
+            speak("I can translate in hindi,spanish,urdu,punjabi,italian,kannad,french,german,chinese,tamil,japanese,latin,russian"
+                  "and many more")
         elif 'translate' in query:
             speak("taking you to the translation section..")
             trans()
@@ -328,5 +268,3 @@ if __name__ == "__main__":
               for i in range(0,headnumb):
                   print(i+1,news_dict['articles'][i]['title'])
                   speak(news_dict['articles'][i]['title'])
-               
- 
